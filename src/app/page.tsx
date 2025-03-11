@@ -5,6 +5,7 @@ import { Badge } from "~/components/ui/badge"
 import Navbar from "~/components/Navbar"
 import ExperienceCard from "~/components/ExperienceCard"
 import Link from "next/link"
+import Footer from "~/components/Footer"
 
 
 const experiences = [
