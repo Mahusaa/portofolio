@@ -30,7 +30,7 @@ export default function Navbar() {
     >
       <div className="container max-w-5xl mx-auto px-4 flex justify-between items-center">
         <Link href="#home" className="text-xl font-bold text-navy">
-          usamahfz.tech
+          usamahfz.site
         </Link>
 
         {/* Desktop Navigation */}

@@ -6,8 +6,9 @@ import type { Metadata } from "next"
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
 export const metadata: Metadata = {
-  title: "Usamah Hafizh | Software Engineer",
-  description: "Portfolio website of Alex Johnson, a software engineer specializing in web development.",
+  title: "Usamah Hafizh",
+  description: "Developer, Engineer, Student that loves to build, read, and code.",
+  icons: [{ rel: "icon", url: "/favicons.ico" }],
 }
 
 export default function RootLayout({
