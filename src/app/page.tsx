@@ -1,10 +1,11 @@
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react"
+import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react"
 
 import { Button } from "~/components/ui/button"
 import { Badge } from "~/components/ui/badge"
 import Navbar from "~/components/Navbar"
 import ExperienceCard from "~/components/ExperienceCard"
 import Link from "next/link"
+import Image from "next/image"
 
 
 const experiences = [
@@ -20,7 +21,7 @@ const experiences = [
     "title": "Backend Developer",
     "company": "PT Leholeh",
     "positionType": "Internship",
-    "duration": "2024 Oct - 2024 Nov",
+    "duration": "Oct - Nov 2024",
     "description": "Developed and optimized backend services for enterprise applications.Improved database performance, and ensured system scalability.",
     "skills": ["PHP", "Laravel", "MySQL"]
   },
@@ -113,13 +114,24 @@ export default function Home() {
         <section id="projects" className="mb-24 scroll-mt-24">
           <h2 className="text-3xl font-bold mb-8 inline-block border-b-4 border-navy pb-2">Projects</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 group">
             <div className="rounded-md border-3 border-navy bg-cream shadow-brutal-navy overflow-hidden transform hover:-translate-y-1 hover:translate-x-1 transition-transform">
-              <div className="aspect-video bg-navy flex items-center justify-center border-b-3 border-navy">
-                <span className="text-white text-xl font-medium">Eduvision Tryout</span>
+              <div className="aspect-video bg-gradient-to-br from-coral/90 to-coral/60 flex items-center justify-center border-b-[3px] border-navy">
+                <Image
+                  src="/eduv.png"
+                  alt="Eduvision"
+                  width={1000}
+                  height={500}
+                  className="w-full h-full object-top"
+                />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold">Eduvision Tryout</h3>
+                <Link href="https://eduvision.web.id">
+                  <h3 className="text-xl font-bold flex items-center gap-1">
+                    <span className="hover:underline">Eduvision Tryout</span>
+                    <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </h3>
+                </Link>
                 <p className="mt-2 text-navy">
                   A UTBK/SNBT tryout web app with IRT-based grading, support over 1,000 concurrent users
                 </p>
@@ -134,24 +146,27 @@ export default function Home() {
                     Postgres
                   </Badge>
                 </div>
-                <div className="mt-6">
-                  <Button
-                    variant="outline"
-                    className="rounded-md border-3 border-navy text-navy hover:bg-navy hover:text-white shadow-brutal-navy transform hover:-translate-y-1 hover:translate-x-1 transition-transform"
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    View Project
-                  </Button>
-                </div>
               </div>
             </div>
 
-            <div className="rounded-md border-3 border-navy bg-cream shadow-brutal-navy overflow-hidden transform hover:-translate-y-1 hover:translate-x-1 transition-transform">
-              <div className="aspect-video bg-gradient-to-br from-coral to-coral/70 flex items-center justify-center border-b-3 border-navy">
-                <span className="text-navy text-xl font-medium">Realtime Cashier and Client App</span>
+            <div className="rounded-md border-3 border-navy bg-cream shadow-brutal-navy overflow-hidden transform hover:-translate-y-1 hover:translate-x-1 transition-transform group">
+              <div className="aspect-video bg-gradient-to-br from-coral to-coral/70 flex items-center justify-center border-b-[3px] border-navy relative">
+                <Image
+                  src="/pasrak.png"
+                  alt="Pasar Rakyat"
+                  layout="fill"
+                  objectFit="cover"
+                  className="absolute"
+                />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold">Realtime Cashier and Client App</h3>
+                <Link href="https://client-pasar-rakyat.vercel.app/">
+                  <h3 className="text-xl font-bold flex items-center gap-1">
+                    <span className="hover:underline">Realtime Cashier and Client App</span>
+                    <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </h3>
+                </Link>
+
                 <p className="mt-2 text-navy">
                   A real-time cashier and client application enabling seamless transactions with live updates that  ensures accurate payment and stock synchronization.
                 </p>
@@ -165,15 +180,6 @@ export default function Home() {
                   <Badge variant="outline" className="bg-cream border-3 border-navy rounded-md shadow-brutal-sm-navy">
                     Firebase
                   </Badge>
-                </div>
-                <div className="mt-6">
-                  <Button
-                    variant="outline"
-                    className="rounded-md border-3 border-navy text-navy hover:bg-navy hover:text-white shadow-brutal-navy transform hover:-translate-y-1 hover:translate-x-1 transition-transform"
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    View Project
-                  </Button>
                 </div>
               </div>
             </div>
