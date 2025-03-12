@@ -17,7 +17,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ title, company, duratio
             <h3 className="text-xl font-bold">{title}</h3>
             <p className="text-navy/70">{company} · {positionType}</p>
           </div>
-          <Badge className="bg-coral text-navy border-3 border-navy rounded-md shadow-brutal-sm-navy">
+          <Badge className="px-2 py-1 md:px-3 md:py-1.5 text-sm md:text-base lg:text-lg bg-coral/80 text-navy border-[3px] border-navy rounded-md shadow-brutal-sm-navy md:shadow-brutal-md-navy lg:shadow-brutal-lg-navy hover:bg-coral">
             {duration}
           </Badge>
         </div>
